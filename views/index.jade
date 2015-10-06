@@ -1,5 +1,325 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(id="section-topbar")
+    div(id="topbar-inner")
+      .container
+        .row
+          .dropdown
+            ul(id="nav", class="nav")
+              li(class="menu-item")
+                a(class="smoothScroll", href="#about", title="About")
+                  i(class="icon-user")
+              li(class="menu-item")
+                a(class="smoothScroll", href="#resume", title="Resume")
+                  i(class="icon-file")
+              li(class="menu-item")
+                a(class="smoothScroll", href="#work", title="Works")
+                  i(class="icon-briefcase")
+              li(class="menu-item")
+                a(class="smoothScroll", href="#contact", title="Contact")
+                  i(class="icon-briefcase")
+          .clear
+        .clear
+      .clear
+
+  #headerwrap
+    .container
+      div(class="row centered")
+        div(class="col-lg-12")
+          h1 Joseph Rey Alquisola
+          h3 Senior Software Engineer | jralquisola@gmail.com
+
+  section(id="about", name="about")
+
+  #intro
+    .container
+      .row
+        div(class="col-lg-2 col-lg-offset-1")
+          h5 ABOUT
+        div(class="col-lg-6")
+          p I'm a Mathematics graduate who works as a Senior Software Developer with 7 years of professional experience both in Ruby on Rails and NodeJS web development. A passionate web developer whose interests are solving real world problems and analysing large data set.
+        div(class="col-lg-3")
+
+  section(id="resume", name="resume")
+  div(class="container desc")
+    div(class="row")
+      div(class="col-lg-2 col-lg-offset-1")
+        h5 WORK
+      div(class="col-lg-6")
+        p
+          t Senior Software Engineer
+          br
+          Pocketmath Pte Ltd
+          br
+        p
+          more
+            ul
+              li Designed and rebuilt Pocketmath's vetting application using modern technologies(nodejs, phantomjs).
+              li Rewrote existing ruby on rails application with test-driven development methodology using Rspec and Capybara.
+              li Refactored and organized javascript codes using Backbonejs.
+              li Worked closely with infrastructure team to solve DevOps problems.
+              li Mentored junior engineers and AdOps members.
+              li Integrated expert system to current architecture to automate business decisions.
+      div(class="col-lg-3")
+        p
+          sm DECEMBER 2013 - CURRENT
+
+      div(class="col-lg-6 col-lg-offset-3")
+        p
+          t Software Developer
+          br
+          | Spuul Pte Ltd
+          br
+        p
+          more
+            ul
+              li Integrated third party APIs, Facebook, Google, Twitter and
+                  payment gateway APIs such as Paypal, Ccavenue, Tappp and
+                  Qubecell.
+              li Refactored codes of our internal ruby on rails web application.
+              li Developed rails application to display analytics for our content
+              providers.
+              li Designed relational databases and added table indexes to improve sql queries.
+              li Reduce RESTful api response time using redis as cache.
+
+      div(class="col-lg-3")
+        p
+          sm NOVEMBER 2012 - NOVEMBER 2013
+
+      div(class="col-lg-6 col-lg-offset-3")
+        p
+          t Software Developer
+          br
+          | Caresharing Inc.
+        p
+          more
+            ul
+              li Maintained existing rails application.
+              li Integrated healthcare APIs to existing RESTful api.
+              li Optimized activerecord queries by removing n+1 queries and adding
+                 indexes to table.
+              li Developed interactive features using modern javascript technologies(jQuery, Backbonejs)
+
+      div(class="col-lg-3")
+        p
+          sm JANUARY 2010 - NOVEMBER 2012
+
+      div(class="col-lg-6 col-lg-offset-3")
+        p
+          t Software Developer
+          br
+          | NEC Telecom Software Philippines
+
+        p
+          more
+            ul
+              li Created scripts to automate testing of virtual target system.
+              li Developed desktop applications using waterfall methodology.
+              li Developed network card simulators using windows API in C++ classes(MFC) and .NET
+
+      div(class="col-lg-3")
+        p
+          sm APRIL 2007 - JANUARY 2010
+    br
+    hr
+
+  div(class="container desc")
+    div(class="row")
+      div(class="col-lg-2 col-lg-offset-1")
+        h5 EDUCATION
+
+      div(class="col-lg-6")
+        p
+          t Bachelor of Science in Mathematics
+          br
+          | University of the Philippines Cebu
+          i 4 Years Course
+
+      div(class="col-lg-3")
+        p
+          sm APRIL 2007
+
+      div(class="col-lg-6 col-lg-offset-3")
+        p
+          t High School
+          br
+          | University of the Philippines Cebu - High School
+          br
+          i 4 Years
+
+      div(class="col-lg-3")
+        p
+          sm APRIL 2003
+    br
+    hr
+
+  div(class="container desc")
+    div(class="row")
+      div(class="col-lg-2 col-lg-offset-1")
+        h5 AWARDS
+      div(class="col-lg-6")
+        p
+          t Magna Cum Laude Graduate
+          br
+          | University of the Philippines Cebu
+          br
+        p
+          more Graduated as Class Valedictorian of Batch 2007
+      div(class="col-lg-3")
+        p
+          sm APRIL 2007
+
+      div(class="col-lg-6 col-lg-offset-3")
+        p
+          t Science Education Institute Scholar
+          br
+          | Department of Science and Technology
+      div(class="col-lg-3")
+        p
+          sm 2003-2007
+
+      div(class="col-lg-6 col-lg-offset-3")
+        p
+          t Japanese Language Proficiency Test Level 3 Passer
+
+      div(class="col-lg-3")
+        p
+          sm 2008
+
+      div(class="col-lg-6 col-lg-offset-3")
+        p
+          t Best in Mathematics
+          br
+          | University of the Philippines High School
+
+      div(class="col-lg-3")
+        p
+          sm 2003
+
+      div(class="col-lg-6 col-lg-offset-3")
+        p
+          t Best in Conduct
+          br
+          | University of the Philippines High School
+
+      div(class="col-lg-3")
+        p
+          sm 2003
+    br
+
+  div(id="skillswrap")
+    div(class="container")
+      div(class="row")
+        div(class="col-lg-2 col-lg-offset-1")
+          h5 SKILLS
+
+        - each obj, index in skills
+          div(class="col-lg-3 #{index>0 && index%3==0 ? 'col-lg-offset-3' : '' } centered")
+            canvas(id=obj.html_id,height="130", width="130")
+            p
+              strong=obj.label
+              br
+              - if(obj.info.length > 0)
+                small (#{obj.info.join(', ')})
+            script.
+                generate_pie_graph(!{JSON.stringify(obj)})
+
+  section(id='work', name='work')
+  div(class="container desc")
+    div(class="row")
+      div(class="col-lg-2 col-lg-offset-1")
+        h5 PORTFOLIO
+      div(class="col-lg-6")
+        p
+          img(class="img-responsive" src="images/pocketmath.png" alt="")
+      div(class="col-lg-3")
+        p
+          a(href='http://pockemath.com', target='_blank') POCKETMATH
+        p
+          more PocketMath is the world's largest, 100% self-serve, mobile demand-side platform (DSP) for programmatic mobile.We make it easy to buy smartphone and tablet ad impressions, within apps, games, and mobile websites - all in real-time. In one platform, you gain immediate access to the world's supply of mobile real-time bidding (RTB) inventory!
+          br
+          br
+          sm
+            i(class="icon-tag")
+            |  senior web developer
+      div(class="col-lg-6 col-lg-offset-3")
+        p
+          img(class="img-responsive", src="images/spuul.jpg", alt="")
+      div(class="col-lg-3")
+        p
+          a(href='https://spuul.com', target='_blank') SPUUL
+        p
+          more Spuul offers an over-the-top (OTT) service across Web, mobile/tablets (iOS, Android), smart TVs, and Chromecast to stream and download feature-length movies, short films, and TV shows in Hindi, Tamil, Telugu, and other Indian regional languages. The service is available worldwide.
+          br
+          br
+          sm
+            i(class="icon-tag")
+            |  web developer
+
+      div(class="col-lg-6 col-lg-offset-3")
+        p
+          img(class="img-responsive", src="images/caresharing.jpg" alt="")
+      div(class="col-lg-3")
+        p
+          a(href='http://caresharing.com', target='_blank') CARESHARING
+        p
+          more We create and develop software applications for the healthcare industry.Our products focus mainly on patient care. These are used by general praticioners, physiotherapists, dietitians, internists, and medical specialists to access and store medical data of patients that has chronic diseases such as diabetes, COPD and CVRM. These allow them to collaborate and provide the ideal patient care.
+          br
+          br
+          sm
+            i(class="icon-tag")
+            |  software developer
+
+      div(class="col-lg-6 col-lg-offset-3")
+        p
+          img(class="img-responsive" src="images/smdcinvestments.png" alt="")
+      div(class="col-lg-3")
+        p
+          a(href='http://smdcinvestments.com',target='_blank') SMDC Investments
+        p
+          more A real estate website owned by a Filipino broker. It is a platform for the broker and its customer to collaborate, discuss and share specific Philippine property.
+          br
+          br
+          sm
+            i(class="icon-tag")
+            |  web developer
+    br
+    br
+
+  section(id="contact", name="contact")
+  div(id="footwrap")
+    div(class="container")
+      div(class="row")
+        div(class="col-lg-2 col-lg-offset-1")
+          h5 CONTACT
+        div(class="col-lg-6")
+          p
+            t Email
+            br
+            a(href='mailto:jralquisola@gmail.com') jralquisola@gmail.com
+            br
+          p
+            t Address
+            br
+            | Block 44, Sims Drive
+            br
+            | Singapore 380044
+          p
+            t Phone/Viber/Whatsapp
+            br
+            | +65 9791 9534
+          p
+            t Skype
+            br
+            | jalquisola
+        div(class="col-lg-3")
+          p
+            sm SOCIAL LINKS
+          p
+            a(href="https://twitter.com/jalquisola",target='_blank')
+              i(class="icon-twitter")
+            a(href="https://sg.linkedin.com/pub/joseph-rey-alquisola/59/43b/338",target='_blank')
+              i(class="icon-linkedin")
+            a(href="https://github.com/jalquisola",target='_blank')
+              i(class="icon-github")

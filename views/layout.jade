@@ -2,6 +2,24 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    meta(charset='utf-8')
+    meta(name="viewport",content="width=device-width, initial-scale=1.0")
+    meta(name="description",content="")
+    meta(name="author",content=title)
+    link(rel='stylesheet',  href="stylesheets/bootstrap.css")
+    link(rel='stylesheet', href="stylesheets/main.css")
+    link(rel="stylesheet", href="stylesheets/font-awesome.min.css")
+    link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Raleway:400,300,700', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src="javascripts/jquery.min.js")
+    script(type="text/javascript", src="javascripts/smoothscroll.js")
+    script(type='text/javascript', src="javascripts/Chart.js")
+    script(type='text/javascript', src="javascripts/home.js")
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="javascripts/html5shiv.js"></script>
+    <script src="javascripts/respond.min.js"></script>
+    <![endif]-->
+  body(data-spy="scroll", data-offset="0", data-target="#nav")
     block content
